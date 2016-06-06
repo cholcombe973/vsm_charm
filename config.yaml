@@ -1,0 +1,5 @@
+options:
+  extra_packages:
+    default: graphviz libapr1 libaprutil1 libaprutil1-ldap xfsprogs alembic keystone python-alembic python-amqp python-backports.ssl-match-hostname python-ceilometerclient python-cinderclient python-cliff python-cliff-doc python-django-horizon python-django-pyscss python-dogpile.cache python-dogpile.core python-ecdsa python-eventlet python-glanceclient python-heatclient python-keystone python-keystoneclient python-keystonemiddleware python-ldappool python-migrate python-netaddr python-neutronclient python-novaclient python-openstack-auth python-oslo.config python-oslo.db python-oslo.i18n python-oslo.messaging python-oslo.serialization python-oslo.utils python-paramiko python-pbr python-posix-ipc python-pycadf python-pyscss python-saharaclient python-six python-sqlalchemy python-sqlalchemy-ext python-stevedore python-swiftclient python-troveclient 
+    description: Space separated list of extra deb packages to install.
+    type: string
