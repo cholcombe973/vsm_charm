@@ -1,0 +1,11 @@
+sites:
+    vsm:
+        options: 'Indexes FollowSymLinks MultiViews'
+        wsgi_file: '/usr/share/vsm-dashboard/vsm_dashboard/django.wsgi'
+        wsgi_process_group: 'dashboard'
+        wsgi_daemon_process: 'dashboard processes=5 threads=5 display-name='%{GROUP}' inactivity-timeout=120 user=dashboard group=dashboard'
+        # wsgi_import_script: '/srv/myapp/main.wsgi process-group=_groupname application-group=%{GLOBAL}'
+        # aliases:
+        #  - ['match': '/assets/', 'target': '/srv/assets']
+        #handlers:
+        #  - ['location': '/assets/', 'handler': 'None']
