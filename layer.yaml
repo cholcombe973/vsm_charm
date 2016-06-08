@@ -1,1 +1,2 @@
-includes: ['layer:basic', 'layer:apt', 'layer:apache-wsgi', 'interface:mysql', 'interface:rabbitmq']
+includes: ['layer:basic', 'layer:apt', 'layer:apache-wsgi',
+  'interface:keystone-credentials', 'interface:mysql', 'interface:rabbitmq']
