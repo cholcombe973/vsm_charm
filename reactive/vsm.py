@@ -56,6 +56,7 @@ def configure_rabbit(rabbit):
 
 
 @when('vsm.keystone.configured', 'vsm.rabbit.configured')
+@when_not('vsm.configured')
 def configure_vsm_conf():
     vsm_dashboard_context = {
         'keystone_private': get_state('vsm.keystone.private-address'), 
@@ -85,38 +86,7 @@ def configure_vsm_conf():
            vsm_conf_path,
            vsm_dashboard_context,
            perms=0o644)
-
-# @when('keystone.available')
-# def setup_django_template():
-#     vsm_context = {
-
-#     }
-#     vsm_conf_path = "/var/lib/charm/{}/ceph.conf"
-#     mkdir(os.path.dirname(vsm_conf_path), owner="vsm",
-#           group="vsm")
-#     render('vsm.conf',
-#            vsm_conf_path,
-#            vsm_context, perms=0o644)
-
-
-# @when('keystone.available')
-# def setup_vsm_dashboard_conf():
-#     vsm_dashboard_context = {
-
-#     }
-#     vsm_conf_path = "/var/lib/charm/{}/ceph.conf"
-#     mkdir(os.path.dirname(vsm_conf_path), owner="vsm",
-#           group="vsm")
-#     render('vsm-dashboard-settings',
-#            vsm_conf_path,
-#            vsm_dashboard_context,
-#            perms=0o644)
-
-
-# @when_not('vsm.installed')
-# def install_vsm_base():
-#     apt_install(PACKAGES)
-#     set_state('vsm.installed')
+    set_state('vsm.configured')
 
 
 @when('apache.available')
