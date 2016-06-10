@@ -10,8 +10,8 @@ tags:
 requires:
   database:
     interface: mysql
-  identity:
-    interface: keystone
+  keystone:
+    interface: keystone-credentials
   queue:
     interface: rabbitmq
 series:
